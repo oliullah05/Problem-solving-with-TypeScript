@@ -26,5 +26,13 @@ We can use Same thing with Optional Chaining.
 const age = 20;
 age===20? 20:"age not 20"
 ```
+Nullish Coalescing (??) :- Nullish Coalescing used for in typeScript to check targeted type is null or undefined . We basically use this when we want some dessition based on null or undefined. Like this:-  
 
+
+```
+ const person = {name:"maruf",number:null};
+ const isNumber = person.number??"no number"
+ console.log(isNumber); //output = "no number"
+
+```
 
