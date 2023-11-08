@@ -183,19 +183,19 @@
 
 
     // Solution-6
-    const arr: number[] = [1, 2, 3, 4,5,6]
+    const arr: number[] = [1, 2, 3, 4]
 
     // console.log(Array.isArray(arr));
 
 
-    const sumOfNumbers = (value: unknown) => {
+    const calculateArraySum = (value: unknown):void => {
         if (Array.isArray(value)) {
-            let total = 0;
-            let count = 0;
+            let total:number = 0;
+            let count:number = 0;
             // console.log(value.length);
             ;
             for (let i = 0; i < value.length; i++) {
-                const index = value[i]
+                const index :number = value[i]
                 if (typeof index === "number") {
                     count++;
                     total = total + index
@@ -205,18 +205,44 @@
 
 
             if(count===value.length){
-              console.log(total);
+             return console.log(total);
                 }
 
 
 
 
         }
-     console.log("this is not an arrey of numbers"); 
+    return console.log("this is not an arrey of numbers"); 
     }
 
 
 
+    // Problem 7:
+
+    // Create a TypeScript function called findFirstOccurrence that accepts an array and a value to search for. Use generics to make the function work with arrays of any data type. Inside the function, find and return the index of the first occurrence of the value in the array. If the value is not found in the array, return -1 to indicate that. Create sample arrays of different data types (e.g., numbers, strings) and call the findFirstOccurrence function for each of them to display the results.
+
+
+
+    const numbers: number[] = [1, 20, 3, 4, 5, 2];
+
+    const strings: string[] = ["apple", "banana", "cherry", "date", "apple2"];
+
+
+  const   findFirstOccurrence =<T>(arrey:T[],value:T):number=>{
+
+          const getIndex = arrey.indexOf(value);
+          return getIndex
+
+  }
+
+
+  const targetNumber = 2;
+
+  const targetString = "cherry";
+  
+  const indexInNumbers = findFirstOccurrence(numbers, targetNumber);
+  
+  const indexInStrings = findFirstOccurrence(strings, targetString);
 
 
 
@@ -235,6 +261,34 @@
 
 
 
+
+
+
+
+
+
+
+
+ 
+
+    //      Problem 8
+
+    // Create a TypeScript program that simulates a simple shopping cart. Define an interface Product with properties like name, price, and quantity. Implement a function that calculates the total cost of the items in the shopping cart. The function should take an array of Product objects as input and return the total cost.
+
+     // Solution-8
+
+     interface Product{
+         name:string,
+         price:number,
+         quantity:number
+     }
+
+
+
+
+
+
+      
 
 
 
@@ -244,3 +298,19 @@
 
     // 
 }
+
+
+
+
+
+
+
+
+
+
+//     // spical method in  every item of number
+//     const arr2 =[1,2,3,21]
+
+//     const isArrayOfNumbers = arr2.every((item) => typeof item === 'number');
+   
+//    console.log(isArrayOfNumbers);   //true
