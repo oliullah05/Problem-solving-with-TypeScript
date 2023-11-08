@@ -77,6 +77,51 @@ const  getAddressCity = (person:Person):string=>{
 
     // Solution-3
 
+class Cat {
+    name:string;
+    color:string;
+    age:number;
+    constructor(name:string,color:string,age:number){
+        this.name=name,
+        this.color=color,
+        this.age=age
+    }
+}
+
+const cat1 :Cat = new Cat("mikel","white",2)
+
+// console.log(cat2 instanceof Cat);
+
+const isCat:any  =(cat:any):string=>{
+if (cat instanceof Cat){
+    return `it is a cat` ;
+}
+else{
+    return `no, it's not a cat` ;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
