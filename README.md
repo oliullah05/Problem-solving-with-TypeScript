@@ -6,6 +6,25 @@ Answer 1 : TypeScript can define type in his code but JavaScript can't define an
 
 #### Question 2 : What is the purpose of the optional chaining (?.) and nullish coalescing (??) operators in TypeScript, and how do they work? Provide an example for each.
 
-Answer 2: optional chaining
+Answer 2: 
+
+Optional Chaining (?.):- Optional chaining is like if-else shorter version. If-else and optional chaining do the same task but another form.The purpose of the optional chaining is use if-else middle of the function but very effectively to use it's short form optional chaining. 
+
+## Usage/Examples
+
+```
+const age = 20;
+if(age===20){
+    return 20;
+}
+else{
+    return "age not 20"
+}
+```
+We can use Same thing with Optional Chaining.
+```
+const age = 20;
+age===20? 20:"age not 20"
+```
 
 
