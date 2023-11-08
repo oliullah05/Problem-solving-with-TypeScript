@@ -152,17 +152,30 @@ interface Car {
 }
 
 interface Driver{
+    name:string,
+    licenseNumber:string
+}
+
+const car :Car = {
+make:"Tesla",
+model:"Tesla Model 3 Plus 2024",
+year:2024
+}
+
+const driver : Driver = {
     name:"Oliullah",
     licenseNumber:"WB008TS"
 }
 
+type CombinedCarAndDriverType =Car&Driver 
+
+const combinedCarAndDriver =(car:Car,driver:Driver):CombinedCarAndDriverType=>{
+    const combinedInObject:CombinedCarAndDriverType =  {...car,...driver}
+   return combinedInObject
+}
 
 
-
-
-
-
-
+combinedCarAndDriver(car,driver)
 
 
 
